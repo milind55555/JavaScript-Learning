@@ -23,3 +23,9 @@ let state = null
 console.log(typeof null); //null is object type
 
 
+
+
+
+
+
+
