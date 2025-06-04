@@ -37,3 +37,28 @@ const myFunction = function(){
 
 console.log(typeof myFunction);
 console.log(typeof heros);
+
+
+/*+++++++++++++++++++++ 
+Stack(primitive),Heap(non-primitive or reference)
+*/
+
+let myMain = "HASD@" //go to stack
+let another = myMain
+another = "HowAreYou"
+console.log(another);
+console.log(myMain);
+
+let userOne ={
+    email:"ad@vom",   // go to heap  direct reference  actual changes will reflect original values
+    upi:"dd",
+}
+
+let userTwo = userOne
+userTwo.email = "KingIsBack"
+console.log(userOne.email);
+console.log(userTwo.email);
+
+
+
+
