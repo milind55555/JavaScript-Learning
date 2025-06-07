@@ -58,4 +58,30 @@ console.log(tinderUser.hasOwnProperty('loggdin'));
 
 
 
+const course={
+    coursename:"JS in Hindi",
+    price:999,
+    courseInstructor:"HiteshSir"
+}
+// course.courseInstructor
+//de structuring
+const {courseInstructor:instructor}=course
+console.log(instructor);
+
+// {  //JSON Format
+//     "name":"Milind",
+//     "coursename":"JS",
+//     "price":"free"
+// }
+
+
+[
+    {},
+    {},
+    {}
+]
+
+
+
+
 
