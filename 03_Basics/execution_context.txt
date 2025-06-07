@@ -1,0 +1,10 @@
+Global execution context 
+function execution context
+eval execution context
+sychronous language
+
+memerory creation phase->alocated t=in var,let =undefined function=defination
+execution phase var=1,var2=2  function addtwo memerory creation + execution phase  deleted automatcally
+
+
+callstack follow Last In First out
