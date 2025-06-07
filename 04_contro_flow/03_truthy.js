@@ -35,3 +35,5 @@ const teaprice=100
 teaprice >=80 ? console.log("You can buy") :console.log("You can;t buy");
 
 
+
+
