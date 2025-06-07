@@ -1,4 +1,3 @@
-const { use } = require("react");
 
 function sayMayName(){
     console.log("M");
@@ -42,6 +41,36 @@ function loginuserMessage(username){
 console.log(loginuserMessage("Milind"));
 
 console.log(loginuserMessage("Milind"));
+
+
+function calculateCartprice(val1,val2,...num1){//rest operator numbeer to array 
+    return num1;
+}
+console.log(calculateCartprice(200,300,600,2000));
+
+const user={
+    username:"Milind",
+    price:"free"
+}
+function handleObject(anyObject){
+    console.log(`Username is ${anyObject.username} and price is ${anyObject.price}`);
+    
+}
+// console.log(handleObject(user));
+handleObject({
+    username:"YOYO",
+    price:"free"
+})
+const newArr = [100,200,300]
+function returnarr(getArray){
+    return getArray[0]
+}
+console.log(returnarr(newArr))
+
+
+
+
+
 
 
 
