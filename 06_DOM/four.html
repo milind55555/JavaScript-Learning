@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning part 4</title>
+</head>
+<body style="background-color: bisque; color: blueviolet;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName){
+      const addLi=  document.createElement('li')
+      addLi.innerHTML=`${langName}`
+      document.querySelector('.language').appendChild(addLi)
+     }
+     addLanguage("Java");
+     addLanguage("TypeScript");
+
+     function addOptiLanguage(langName){
+       const li= document.createElement('li')
+       li.appendChild(document.createTextNode(langName))
+       document.querySelector('.language').appendChild(li)
+     }
+     addOptiLanguage("Python")
+
+     //Edit
+    const secondLang= document.querySelector('li:nth-child(2)')
+    // secondLang.innerHTML ="MySql"
+  const newLi = document.createElement('li')
+     newLi.textContent ="Brother"
+     secondLang.replaceWith(newLi)
+    //  document.querySelector('.language').appendChild(newLi)
+
+
+    //Edit
+    const firstLang1=document.querySelector("li:first-child")
+    firstLang1.outerHTML ='<li>Typescript</li>' 
+
+    //remove
+    const removeLast =document.querySelector("li:last-child")
+    removeLast.remove()
+
+    
+      
+
+
+
+</script>
+</html>

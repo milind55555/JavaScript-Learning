@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning</title>
+</head>
+<body style="background-color: aquamarine; color: rgb(227, 34, 34);">
+    <div class="parent">
+        <div class="day">Sunday</div>
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+    </div>
+
+    <script>
+       const parentClass = document.querySelector('.parent')
+       console.log(parentClass);
+       console.log(parentClass.children);
+        console.log(parentClass.children[0]);
+        console.log(parentClass.children[0].innerHTML);
+
+        for (let i = 0; i < parentClass.children.length; i++) {
+            console.log(parentClass.children[i].innerHTML);
+            }
+
+        parentClass.children[0].style.color='orange' 
+        console.log(parentClass.firstElementChild);
+        console.log(parentClass.lastElementChild);
+
+        const dayOne =document.querySelector('.day')
+        console.log(dayOne);
+        console.log(dayOne.parentElement);
+        console.log(dayOne.nextElementSibling);
+
+        console.log("Nodes: ", parentClass.childNodes);
+        
+        
+        
+        
+        
+           
+       
+       
+    </script>
+</body>
+</html>
