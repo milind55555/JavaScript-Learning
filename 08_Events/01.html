@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // document.getElementById('owl').onclick = function(){
+    //     alert('Owl image clicked!');
+    // }
+     //attachEvent()
+    //JQuery -on
+    //Type ,timestamp,defaultPrevented,target,srcElement,composedPath,toElement,currentTarget,clientX,xlientY,screenX,
+//altKey,ShiftKey,ctrlKey,metaKey,button,buttons,relatedTarget,which,key,keyCode,code,location,
+
+    // document.getElementById('images').addEventListener('click',(e)=>{
+    //     console.log("Click inside url");
+        
+        
+    // },true)
+    // document.getElementById('owl').addEventListener('click',(e)=>{
+    //     console.log("Clicked Owl image");
+        
+        
+    // },true) //false :bubblinng mean click event will be triggered first on the parent element and then on the child element
+    // //true :capturing mean click event will be triggered first on the child element and then on the parent element top to bottom
+    // document.getElementById('photoshop').addEventListener('click',(e)=>{
+    //     console.log("Clicked Photoshop image");
+    //     e.stopPropagation(); //stop the event from bubbling up to the parent element
+    // },true)
+
+
+    // document.getElementById('google').addEventListener('click',(e)=>{
+    //     e.preventDefault(); //prevent the default action of the link
+    //     e.stopPropagation(); //stop the event from bubbling up to the parent element
+    //     console.log("Clicked Google link"); 
+        
+    // },false)
+
+
+
+    document.querySelector('#images')
+    .addEventListener('click',(e)=>{
+        console.log(e.target.parentNode);
+        console.log(e.target.tagName); //get the tag name of the clicked element
+        
+        if(e.target.tagName === 'IMG'){
+             let removeIt = e.target.parentNode;
+         removeIt.remove(); //remove the parent element of the clicked image
+        // removeIt.parentNode.removeChild(removeIt); //remove the parent element of the clicked image
+        }
+       
+        
+    },false) //this will not work because there is no element with the id 'images' in the document
+
+    
+
+   
+
+</script>
+</html>
