@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+<body>
+    <h1>Hello World!!!</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const heyMilind=()=>{
+        console.log("Milind H");
+        
+    }
+    // setTimeout(heyMilind,2000)
+    // setTimeout(()=>{
+    //    console.log("Milind H"); 
+    // },5000)
+    const changtext = function(){
+        document.querySelector("h1").innerHTML="JS SERIES"
+    
+    }
+   const changeMe= setTimeout(changtext,3000)
+
+    document.querySelector("#stop").addEventListener('click',()=>{
+        clearTimeout(changeMe)
+        console.log("Stopped!!");
+        
+    })
+    
+    
+</script>
+</html>
